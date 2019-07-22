@@ -1,0 +1,349 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据结构 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="data_structure.html">
+            
+                <a href="data_structure.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据结构</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="11-&#x89E3;&#x538B;&#x5E8F;&#x5217;&#x8D4B;&#x503C;&#x7ED9;&#x591A;&#x4E2A;&#x53D8;&#x91CF;&#x4F5C;&#x7528;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;">1.1 &#x89E3;&#x538B;&#x5E8F;&#x5217;&#x8D4B;&#x503C;&#x7ED9;&#x591A;&#x4E2A;&#x53D8;&#x91CF;(&#x4F5C;&#x7528;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;)</h1>
+<pre><code class="lang-python">p = (<span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+x, y = p
+</code></pre>
+<pre><code class="lang-python">data = [ <span class="hljs-string">&apos;ACME&apos;</span>, <span class="hljs-number">50</span>, <span class="hljs-number">91.1</span>, (<span class="hljs-number">2012</span>, <span class="hljs-number">12</span>, <span class="hljs-number">21</span>) ]
+name, shares, price, date = data
+name, shares, price, (year, mon, day) = data
+</code></pre>
+<pre><code class="lang-python">s = <span class="hljs-string">&apos;Hello&apos;</span>
+a, b, c, d, e = s
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x53D8;&#x91CF;&#x4E2A;&#x6570;&#x548C;&#x5E8F;&#x5217;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#x4E0D;&#x5339;&#x914D;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;</span>
+p = (<span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+x, y, z = p
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x90E8;&#x5206;&#x89E3;&#x538B;</span>
+data = [ <span class="hljs-string">&apos;ACME&apos;</span>, <span class="hljs-number">50</span>, <span class="hljs-number">91.1</span>, (<span class="hljs-number">2012</span>, <span class="hljs-number">12</span>, <span class="hljs-number">21</span>) ]
+_, shares, price, _=data
+</code></pre>
+<h1 id="12-&#x89E3;&#x538B;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#x7ED9;&#x591A;&#x4E2A;&#x53D8;&#x91CF;">1.2 &#x89E3;&#x538B;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#x7ED9;&#x591A;&#x4E2A;&#x53D8;&#x91CF;</h1>
+<pre><code class="lang-python">record = (<span class="hljs-string">&apos;Dave&apos;</span>, <span class="hljs-string">&apos;dave@example.com&apos;</span>, <span class="hljs-string">&apos;773-555-1212&apos;</span>, <span class="hljs-string">&apos;847-555-1212&apos;</span>)
+record = (<span class="hljs-string">&apos;Dave&apos;</span>, <span class="hljs-string">&apos;dave@example.com&apos;</span>)
+record = (<span class="hljs-string">&apos;Dave&apos;</span>, <span class="hljs-string">&apos;dave@example.com&apos;</span>,<span class="hljs-string">&apos;773-555-1212&apos;</span>, <span class="hljs-string">&apos;847-555-1212&apos;</span>,<span class="hljs-string">&apos;773-555-1213&apos;</span>, <span class="hljs-string">&apos;847-555-1213&apos;</span>)
+name, email, *phone_numbers = record
+phone_numbers
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment">#&#x661F;&#x53F7;&#x8868;&#x8FBE;&#x5F0F;&#x4E5F;&#x80FD;&#x7528;&#x5728;&#x5217;&#x8868;&#x7684;&#x5F00;&#x59CB;&#x90E8;&#x5206;</span>
+*trailing, current = [<span class="hljs-number">10</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">3</span>]
+trailing
+current
+
+trailing, *current = [<span class="hljs-number">10</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">9</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>, <span class="hljs-number">3</span>]
+trailing
+current
+</code></pre>
+<pre><code class="lang-python">line = <span class="hljs-string">&apos;nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false&apos;</span>
+uname, *fields, homedir, sh = line.split(<span class="hljs-string">&apos;:&apos;</span>)
+</code></pre>
+<h1 id="13-&#x53CC;&#x5411;&#x961F;&#x5217;">1.3 &#x53CC;&#x5411;&#x961F;&#x5217;</h1>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> deque
+
+
+q = deque(maxlen=<span class="hljs-number">3</span>)
+q.append(<span class="hljs-number">1</span>)
+q.append(<span class="hljs-number">2</span>)
+q.append(<span class="hljs-number">3</span>)
+q.append(<span class="hljs-number">4</span>)
+q.append(<span class="hljs-number">5</span>)
+<span class="hljs-comment">#q.appendleft(6)  ###&#x9ED8;&#x8BA4;&#x4ECE;&#x53F3;&#x8FB9;</span>
+</code></pre>
+<pre><code class="lang-python">q.pop() <span class="hljs-comment">#&#x961F;&#x5C3E;&#x5143;&#x7D20;&#x5220;&#x53BB;</span>
+q.popleft() <span class="hljs-comment">#&#x961F;&#x5934;&#x5143;&#x7D20;&#x5220;&#x53BB;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment">#&#x5728;&#x961F;&#x5217;&#x4E24;&#x7AEF;&#x63D2;&#x5165;&#x6216;&#x5220;&#x9664;&#x5143;&#x7D20;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x90FD;&#x662F; O(1) &#xFF0C;</span>
+<span class="hljs-comment">#&#x800C;&#x5728;&#x5217;&#x8868;&#x7684;&#x5F00;&#x5934;&#x63D2;&#x5165;&#x6216;&#x5220;&#x9664;&#x5143;&#x7D20;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(N) &#x3002;</span>
+</code></pre>
+<h1 id="14-&#x67E5;&#x627E;&#x6700;&#x5927;&#x6216;&#x6700;&#x5C0F;&#x7684;-n-&#x4E2A;&#x5143;&#x7D20;heapq">1.4 &#x67E5;&#x627E;&#x6700;&#x5927;&#x6216;&#x6700;&#x5C0F;&#x7684; N &#x4E2A;&#x5143;&#x7D20;(heapq)</h1>
+<pre><code class="lang-python"><span class="hljs-comment">#&#x8BE5;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E86;&#x5806;&#x6392;&#x5E8F;&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;,heapq&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x521B;&#x5EFA;&#x5806;&#xFF0C; &#x4E00;&#x79CD;&#x662F;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7A7A;&#x5217;&#x8868;&#xFF0C;</span>
+<span class="hljs-comment">#&#x7136;&#x540E;&#x4F7F;&#x7528;heapq.heappush()&#x51FD;&#x6570;&#x628A;&#x503C;&#x52A0;&#x5165;&#x5806;&#x4E2D;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x5C31;&#x662F;&#x4F7F;&#x7528;heap.heapify(list)&#x8F6C;&#x6362;&#x5217;&#x8868;&#x6210;&#x4E3A;&#x5806;&#x7ED3;&#x6784;</span>
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> heapq
+
+
+nums = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">54</span>, <span class="hljs-number">23</span>, <span class="hljs-number">132</span>]
+heap = []
+<span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> nums:
+    heapq.heappush(heap, num)  <span class="hljs-comment"># &#x52A0;&#x5165;&#x5806;</span>
+
+print(heap[<span class="hljs-number">0</span>])  <span class="hljs-comment"># &#x5982;&#x679C;&#x53EA;&#x662F;&#x60F3;&#x83B7;&#x53D6;&#x6700;&#x5C0F;&#x503C;&#x800C;&#x4E0D;&#x662F;&#x5F39;&#x51FA;&#xFF0C;&#x4F7F;&#x7528;heap[0]</span>
+print([heapq.heappop(heap) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(len(nums))])  <span class="hljs-comment"># &#x5806;&#x6392;&#x5E8F;&#x7ED3;&#x679C;</span>
+</code></pre>
+<pre><code class="lang-python">heap= []
+nums = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">54</span>, <span class="hljs-number">23</span>, <span class="hljs-number">132</span>]
+heapq.heapify(nums)
+print([heapq.heappop(heap) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(len(nums))])
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> math
+<span class="hljs-keyword">from</span> io <span class="hljs-keyword">import</span> StringIO
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_tree</span><span class="hljs-params">(tree, total_width=<span class="hljs-number">36</span>, fill=<span class="hljs-string">&apos; &apos;</span>)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Pretty-print a tree.&quot;&quot;&quot;</span>
+    output = StringIO()
+    last_row = <span class="hljs-number">-1</span>
+    <span class="hljs-keyword">for</span> i, n <span class="hljs-keyword">in</span> enumerate(tree):
+        <span class="hljs-keyword">if</span> i:
+            row = int(math.floor(math.log(i + <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)))
+        <span class="hljs-keyword">else</span>:
+            row = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">if</span> row != last_row:
+            output.write(<span class="hljs-string">&apos;\n&apos;</span>)
+        columns = <span class="hljs-number">2</span> ** row
+        col_width = int(math.floor(total_width / columns))
+        output.write(str(n).center(col_width, fill))
+        last_row = row
+    print(output.getvalue())
+    print(<span class="hljs-string">&apos;-&apos;</span> * total_width)
+    print()
+</code></pre>
+<pre><code class="lang-python">data = [<span class="hljs-number">19</span>, <span class="hljs-number">9</span>, <span class="hljs-number">4</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>]
+heap = []
+print(<span class="hljs-string">&apos;random :&apos;</span>, data)
+print()
+
+<span class="hljs-keyword">for</span> n <span class="hljs-keyword">in</span> data:
+    print(<span class="hljs-string">&apos;add {:&gt;3}:&apos;</span>.format(n))
+    heapq.heappush(heap, n)
+    show_tree(heap)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据结构","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"CookBook/data_structure.md","mtime":"2019-07-22T05:53:34.590Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-22T07:34:39.787Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
